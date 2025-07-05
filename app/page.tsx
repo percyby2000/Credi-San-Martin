@@ -276,7 +276,7 @@ export default function CooperativaWebsite() {
               {slides[currentSlide].cta}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
+            <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-coop-lime-500">
               Conoce más
             </Button>
           </div>
@@ -653,18 +653,27 @@ export default function CooperativaWebsite() {
                 </CardContent>
               </Card>
 
-              {/* Map placeholder */}
-              <Card>
+                {/* Google Maps embed for Ayacucho, Credi San Martín de Porres */}
+                <Card>
+                <CardHeader>
+                  <CardTitle>Ubicación en el mapa</CardTitle>
+                  <CardDescription>Encuéntranos en Ayacucho</CardDescription>
+                </CardHeader>
                 <CardContent className="p-0">
-                  <div className="h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <MapPin className="w-12 h-12 mx-auto mb-2" />
-                      <p>Mapa interactivo</p>
-                      <p className="text-sm">Ubicación de nuestras oficinas</p>
-                    </div>
+                  <div className="h-64 rounded-lg overflow-hidden">
+                  <iframe
+                    title="Credi San Martín de Porres Ayacucho"
+                    src="https://www.google.com/maps?q=Credi+San+Martin+de+Porres,+Ayacucho,+Perú&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
             </div>
           </div>
         </div>
@@ -675,18 +684,6 @@ export default function CooperativaWebsite() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-lime-400 to-green-500 rounded-full flex items-center justify-center">
-                  <Building className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">COOPSMP</h3>
-                  <p className="text-sm text-gray-400">San Martín de Porres</p>
-                </div>
-              </div>
-              <p className="text-gray-400 mb-4">
-                Tu cooperativa de confianza desde 1999. Construyendo sueños financieros juntos.
-              </p>
                 <div className="flex space-x-4">
                 <a
                   href="https://web.facebook.com/profile.php?id=100091937571696"
@@ -816,7 +813,7 @@ export default function CooperativaWebsite() {
                 clipRule="evenodd"
                 />
               </svg>
-              Designer Percy
+              Designer by Percy
               </a>
             </div>
             </div>
