@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Credi San Martin de Porres ',
-  description: 'Created with v0',
+  description: 'Tu banco en línea',
   generator: 'v0.dev',
 }
 
