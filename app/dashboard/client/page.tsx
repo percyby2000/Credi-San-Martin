@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Imagenlogo from "@/public/logo.png";
+import Image from "next/image";
 import {
   User,
   DollarSign,
@@ -80,10 +81,10 @@ export default function ClientDashboard() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-lime-400 to-green-500 rounded-full flex items-center justify-center">
-                <Building className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 flex items-center justify-center">
+                <Image src={Imagenlogo} alt="Logo" width={40} height={40} />
               </div>
-              <span className="font-semibold text-gray-900">Mi COOPSMP</span>
+              <span className="font-semibold text-gray-900">Credi SMP</span>
             </Link>
             <Badge className="bg-blue-100 text-blue-700">Cliente</Badge>
           </div>
@@ -111,14 +112,6 @@ export default function ClientDashboard() {
             <Button variant="ghost" className="w-full justify-start bg-blue-50 text-blue-700">
               <Home className="w-4 h-4 mr-3" />
               Mi Dashboard
-            </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              <PiggyBank className="w-4 h-4 mr-3" />
-              Mis Cuentas
-            </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              <CreditCard className="w-4 h-4 mr-3" />
-              Mis Créditos
             </Button>
             <Link href="/dashboard/client/transfers">
               <Button variant="ghost" className="w-full justify-start">
@@ -489,10 +482,12 @@ export default function ClientDashboard() {
                       <Download className="w-4 h-4 mr-2" />
                       Descargar Estado
                     </Button>
-                    <Button variant="outline" className="w-full justify-start">
-                      <CreditCard className="w-4 h-4 mr-2" />
-                      Solicitar Tarjeta
-                    </Button>
+                    <Link href="/dashboard/client/requests">
+                      <Button variant="outline" className="w-full justify-start">
+                        <Calculator className="w-4 h-4 mr-2" />
+                        Solicitar Tarjeta
+                      </Button>
+                    </Link>
                     <Link href="/dashboard/client/simulators">
                       <Button variant="outline" className="w-full justify-start">
                         <Calculator className="w-4 h-4 mr-2" />

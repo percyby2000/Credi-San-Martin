@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import Imagenlogo from "@/public/logo.png";
+import Image from "next/image";
 import {
   FileText,
   Building,
@@ -168,16 +170,16 @@ export default function ProceduresPage() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-lime-400 to-green-500 rounded-full flex items-center justify-center">
-                <Building className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 flex items-center justify-center">
+                <Image src={Imagenlogo} alt="Logo" width={40} height={40} />
               </div>
-              <span className="font-semibold text-gray-900">COOPSMP Empleado</span>
+              <span className="font-semibold text-gray-900">Credi SMP</span>
             </Link>
-            <Badge className="bg-green-100 text-green-700">Trabajador</Badge>
+            <Badge className="bg-green-100 text-green-700">Empleada</Badge>
           </div>
 
           <div className="flex items-center space-x-4">
-            <span className="text-sm text-gray-600">Bienvenido, Ana Martínez</span>
+            <span className="text-sm text-gray-600">Bienvenido, Mavel Trejo</span>
             <Button variant="ghost" size="sm" className="relative">
               <Bell className="w-5 h-5" />
               <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full text-xs"></span>

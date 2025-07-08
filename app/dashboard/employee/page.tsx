@@ -9,6 +9,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import Imagenlogo from "@/public/logo.png";
+import Image from "next/image";
 import {
   Users,
   FileText,
@@ -30,6 +32,7 @@ import {
   Mail,
   MoreHorizontal,
   X,
+  BarChart3,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -167,16 +170,16 @@ export default function EmployeeDashboard() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-lime-400 to-green-500 rounded-full flex items-center justify-center">
-                <Building className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 flex items-center justify-center">
+                <Image src={Imagenlogo} alt="Logo" width={40} height={40} />
               </div>
-              <span className="font-semibold text-gray-900">COOPSMP Empleado</span>
+              <span className="font-semibold text-gray-900">Credi SMP</span>
             </Link>
-            <Badge className="bg-green-100 text-green-700">Trabajador</Badge>
+            <Badge className="bg-green-100 text-green-700">Empleada</Badge>
           </div>
 
           <div className="flex items-center space-x-4">
-            <span className="text-sm text-gray-600">Bienvenido, Ana Martínez</span>
+            <span className="text-sm text-gray-600">Bienvenido, Mavel Trejo </span>
             <Button variant="ghost" size="sm" className="relative">
               <Bell className="w-5 h-5" />
               {notifications.length > 0 && (
@@ -221,22 +224,10 @@ export default function EmployeeDashboard() {
                 Solicitudes de Crédito
               </Button>
             </Link>
-            <Link href="/dashboard/employee/communications" className="block">
+              <Link href="/dashboard/reports">
               <Button variant="ghost" className="w-full justify-start">
-                <MessageSquare className="w-4 h-4 mr-3" />
-                Comunicaciones
-              </Button>
-            </Link>
-            <Link href="/dashboard/employee/schedule" className="block">
-              <Button variant="ghost" className="w-full justify-start">
-                <Calendar className="w-4 h-4 mr-3" />
-                Mi Agenda
-              </Button>
-            </Link>
-            <Link href="/dashboard/employee/reports" className="block">
-              <Button variant="ghost" className="w-full justify-start">
-                <TrendingUp className="w-4 h-4 mr-3" />
-                Reportes
+                <BarChart3 className="w-4 h-4 mr-3" />
+                Reportes Financieros
               </Button>
             </Link>
           </nav>

@@ -186,45 +186,29 @@ export default function AdminDashboard() {
                 Reportes Financieros
               </Button>
             </Link>
-            <Link href="/dashboard/admin/documents">
-              <Button variant="ghost" className="w-full justify-start">
-                <FileText className="w-4 h-4 mr-3" />
-                Documentos
-              </Button>
-            </Link>
-            <Link href="/dashboard/admin/security">
-              <Button variant="ghost" className="w-full justify-start">
-                <Shield className="w-4 h-4 mr-3" />
-                Seguridad
-              </Button>
-            </Link>
+
             <Link href="/dashboard/client/profile">
               <Button variant="ghost" className="w-full justify-start">
                 <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-200">
-  <svg
-    className="w-4 h-4 text-gray-600"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M5.121 17.804A9 9 0 1112 21a9.003 9.003 0 01-6.879-3.196z"
-    />
-    <circle cx={12} cy={11} r={3} />
-  </svg>
-</span>
+                  <svg
+                    className="w-4 h-4 text-gray-600"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5.121 17.804A9 9 0 1112 21a9.003 9.003 0 01-6.879-3.196z"
+                    />
+                    <circle cx={12} cy={11} r={3} />
+                  </svg>
+                </span>
                 Mi Perfil
               </Button>
             </Link>
-            <Link href="/dashboard/admin/settings">
-              <Button variant="ghost" className="w-full justify-start">
-                <Settings className="w-4 h-4 mr-3" />
-                Configuración
-              </Button>
-            </Link>
+
           </nav>
         </aside>
 
@@ -505,10 +489,10 @@ export default function AdminDashboard() {
                           <div className="flex items-start space-x-2">
                             <div
                               className={`w-2 h-2 rounded-full mt-2 ${notification.type === "warning"
-                                  ? "bg-yellow-500"
-                                  : notification.type === "success"
-                                    ? "bg-green-500"
-                                    : "bg-blue-500"
+                                ? "bg-yellow-500"
+                                : notification.type === "success"
+                                  ? "bg-green-500"
+                                  : "bg-blue-500"
                                 }`}
                             ></div>
                             <div className="flex-1">
