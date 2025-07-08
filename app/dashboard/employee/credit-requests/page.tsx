@@ -212,7 +212,7 @@ export default function CreditRequestsPage() {
               </div>
               <span className="font-semibold text-gray-900">Credi SMP</span>
             </Link>
-            <Badge className="bg-green-100 text-green-700">Trabajador</Badge>
+            <Badge className="bg-green-100 text-green-700">Empleada</Badge>
           </div>
 
           <div className="flex items-center space-x-4">

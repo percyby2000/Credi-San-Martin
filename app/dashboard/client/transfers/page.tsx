@@ -13,6 +13,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Send, ArrowLeft, CreditCard, Download } from "lucide-react"
 import Link from "next/link"
 
+
 export default function TransfersPage() {
   const [transferType, setTransferType] = useState("internal")
   const [amount, setAmount] = useState("")
